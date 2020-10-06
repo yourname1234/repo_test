@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>器件库</title>
+		<!--<link rel="stylesheet" type="text/css" href="css/common.css"/>-->
+		<style type="text/css">
+			#css1 {
+				background-color: #3CD8FF;
+					margin: 10px;
+					
+				}
+			#css2 {
+				
+					margin: 10px;
+					position: absolute;
+					left: 30%;
+					top: 20%;
+			}
+		</style>
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	</head>
+	<body>
+		<div id="app">
+		<div id="css1">
+			<a style="text-decoration: none;" href="componentlib1.html">电子元器件</a>
+			<a style="text-decoration: none;" href="componentlib2.html">仪器设备</a><br>
+<!--			<form action="http://baidu.com/s" method="get">-->
+
+					<label >请输入器件名称：</label>
+					<input type="text" name="name" id="name" v-model="name">
+					<input type="button" value="搜索" @click="search">
+
+<!--			</form>-->
+		</div>
+		<a style="text-decoration: none; float: right;" href="main.html" >返回主页</a>
+		<HR SIZE=3>
+		<div id="css2">
+			名称：{{name}}<br><br><br />
+			库存总量：{{total_amount}}<br><br><br />
+			借出数量：{{lend_amount}}<br><br><br />
+			库存余量：{{remain_amount}}<br><br><br/>
+			<a href="componentfile2.html">说明文档</a>
+		</div>
+		</div>
+		<script type="text/javascript" src="/daoshizhi_ssmTest2_war_exploded/js/componentlib2.js"></script>
+	</body>
+</html>
